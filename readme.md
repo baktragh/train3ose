@@ -9,7 +9,7 @@ The open source edition is licensed under the BSD license. For full terms of the
 
 More information on the game
 ----------------------------
-Visit http://baha.webowna.cz/2019/11/22/train-3/ to get more information on the game.
+Visit http://baktra.wz.cz/baha-software/train-3/ to get more information on the game.
 
 Building the Game from Source
 -----------------------------
