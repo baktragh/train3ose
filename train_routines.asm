@@ -35,7 +35,7 @@ _statusBarBackground:   .byte 0                 ;Status bar background for DLI
 _menuDliCount:          .byte 0                 ;Counter to control DLI
 
 ;Menu scroller 
-menu_scroll_limit=167+36                        ;Maximum number for counter
+menu_scroll_limit=163+36                        ;Maximum number for counter
 menu_scroll_maxhsc=3                            ;Maximum HSCROLL value
 
 _menu_scroll_hscroll:     .byte menu_scroll_maxhsc   ;Antic scroll counter
