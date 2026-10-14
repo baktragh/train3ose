@@ -177,7 +177,7 @@ void toggleGameInit(unsigned char gameInitType);
 void expandAndPaintLevel(unsigned char levelIndex);
 void transposeElement(unsigned char* ptr);
 void eraseElement(unsigned char* ptr);
-void expandMask(char* elementDataPtr, unsigned char elementCharIndex);
+void expandMask(unsigned char* elementDataPtr, unsigned char elementCharIndex);
 void paintGameStatusBar();
 
 /*Decimal displays*/
@@ -524,7 +524,7 @@ level:
     /*Reset train status*/
     levelTrainLength = 0;
     memset(trainCarArray, 0, sizeof (trainCarArray));
-    memset(trainCarArray, 0, sizeof (trainDirectionArray));
+    memset(trainDirectionArray, 0, sizeof (trainDirectionArray));
 
     /*Wait for joystick movement*/
     locoOldJoystickDirection = JS_C;
@@ -715,7 +715,7 @@ gameLoop:
 
     goto gameLoop;
 
-    return 0;
+    
 }
 
 /*Move all train cars in proper direction*/
@@ -1636,7 +1636,6 @@ unsigned char screenSceneSelection() {
     /*Draw title line*/
     ptr1 = &TRAIN_DATA_GAMESCREEN;
     memcpy(ptr1 + T_SCENE_SEL_C, T_SCENE_SEL, T_SCENE_SEL_L);
-    ptr1+20;
     
     /*Draw separators*/
     memset(&TRAIN_DATA_GAMESCREEN+20,CHAR_SEPARATOR,40);
